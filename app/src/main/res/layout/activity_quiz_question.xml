@@ -1,9 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".QuizQuestionActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="What JigglyPun question is this?"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_marginTop="16dp"
+            android:contentDescription="image"
+            android:src="@drawable/jigglypuff"
+            android:layout_width="180dp"
+            android:layout_height="180dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_progress_details"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:progressBarStyleHorizontal"
+                android:indeterminate="false"
+                android:max="10"
+                android:minHeight="50dp"
+                android:progress="0"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:gravity="center"
+                android:padding="12dp"
+                android:textColorHint="@color/textColorHint"
+                android:textSize="14sp"
+                android:text="0/10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_option_one"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:textSize="18sp"
+                android:text="Answer 1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>
