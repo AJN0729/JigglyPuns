@@ -8,12 +8,12 @@ object Constants {
 
         val que1 = Question(
             1,
-            "Question 1",
+            "What you would say when your caught doing something bad",
             R.drawable.jigglypuff,
-            "Option 1",
-            "Option 2",
-            "Option 3",
-            "Option 4",
+            "The Jigglypuff is up",
+            "Oh snap, my mom Jigglypuff me",
+            "I'm about to Jigglypuff",
+            "quick, Jigglypuff, RUN!",
             1
         )
 
@@ -21,52 +21,52 @@ object Constants {
 
         val que2 = Question(
             2,
-            "Question 1",
+            "what are you when you work out at the gym?",
             R.drawable.jigglypuff,
-            "Option 1",
-            "Option 2",
-            "Option 3",
-            "Option 4",
-            1
+            "Jigglycool",
+            "Epicpuff",
+            "Strongpuff",
+            "Jigglybuff",
+            4
         )
 
         questionsList.add(que2)
 
         val que3 = Question(
             3,
-            "Question 1",
+            "When you are the imposter",
             R.drawable.jigglypuff,
-            "Option 1",
-            "Option 2",
-            "Option 3",
-            "Option 4",
-            1
+            "Suspuff",
+            "Jigglesus",
+            "Susspuff",
+            "Jigglysus",
+            4
         )
 
         questionsList.add(que3)
 
         val que4 = Question(
             4,
-            "Question 1",
+            "No Jigglypuff?",
             R.drawable.jigglypuff,
-            "Option 1",
-            "Option 2",
-            "Option 3",
-            "Option 4",
-            1
+            "Jigglysus",
+            "Desperately seeking Jigglypuff",
+            "Jigglycomeback",
+            "Jigglyno",
+            2
         )
 
         questionsList.add(que4)
 
         val que5 = Question(
             5,
-            "Question 1",
+            "how good is your RNG?",
             R.drawable.jigglypuff,
-            "Option 1",
-            "Option 2",
-            "Option 3",
-            "Option 4",
-            1
+            "Jigglypuff",
+            "Jigglypuff",
+            "Jigglypuff",
+            "Jigglypuff",
+            3
         )
 
         questionsList.add(que5)
