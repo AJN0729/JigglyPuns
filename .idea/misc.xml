@@ -5,8 +5,11 @@
       <map>
         <entry key="app/src/main/res/drawable/default_option_border.xml" value="0.147" />
         <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.164" />
+        <entry key="app/src/main/res/drawable/selected_option_border.xml" value="0.296" />
+        <entry key="app/src/main/res/drawable/wrong_option_border.xml" value="0.296" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_quiz_question.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_results.xml" value="0.4317708333333333" />
       </map>
     </option>
   </component>

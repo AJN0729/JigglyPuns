@@ -10,4 +10,7 @@
     <color name="button">#FFBB86FC</color>
     <color name="textColorHint">#7A8089</color>
     <color name="defaultOptionBorder">#FFC0CB</color>
+    <color name="selectedOptionBorder">#5870cb</color>
+    <color name="wrongOptionBorder">#FFCC0000</color>
+    <color name="correctOptionBorder">#c0cfff</color>
 </resources>

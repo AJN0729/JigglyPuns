@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JigglyPuns">
         <activity
+            android:name=".ResultsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".QuizQuestionActivity"
             android:exported="false"
             android:screenOrientation="portrait"/>

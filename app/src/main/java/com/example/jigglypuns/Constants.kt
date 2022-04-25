@@ -2,6 +2,10 @@ package com.example.jigglypuns
 
 object Constants {
 
+    const val USER_NAME = "user_name"
+    const val TOTAL_QUESTIONS = "total_questions"
+    const val CORRECT_ANSWERS = "correct_answers"
+
     fun getQuestions(): ArrayList<Question> {
 
         val questionsList = ArrayList<Question>()
@@ -73,12 +77,12 @@ object Constants {
 
         val que6 = Question(
             6,
-            "Question 1",
+            "someone who fixes computers",
             R.drawable.jigglypuff,
-            "Option 1",
-            "Option 2",
-            "Option 3",
-            "Option 4",
+            "Geekachu",
+            "JigglyBuff",
+            "Peekachu",
+            "Mewtwo",
             1
         )
 
@@ -86,12 +90,12 @@ object Constants {
 
         val que7 = Question(
             7,
-            "Question 1",
+            "When im bored",
             R.drawable.jigglypuff,
-            "Option 1",
-            "Option 2",
-            "Option 3",
-            "Option 4",
+            "charizard",
+            "not this",
+            "Not peakachu",
+            "some jigglypuff pun",
             1
         )
 
@@ -99,7 +103,7 @@ object Constants {
 
         val que8 = Question(
             8,
-            "Question 1",
+            "Q 8",
             R.drawable.jigglypuff,
             "Option 1",
             "Option 2",
