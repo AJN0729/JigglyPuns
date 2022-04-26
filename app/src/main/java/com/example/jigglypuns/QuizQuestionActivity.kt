@@ -1,5 +1,6 @@
 package com.example.jigglypuns
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
@@ -33,6 +34,18 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_question)
 
+        mUserName = intent.getStringExtra(Constants.USER_NAME)
+        progressBar = findViewById(R.id.progressBar)
+        tvProgress = findViewById(R.id.tv_progress)
+        tvQuestion = findViewById(R.id.tv_question)
+        tvImage = findViewById(R.id.iv_image)
+        tvOptionsOne = findViewById(R.id.tv_option_one)
+        tvOptionsTwo = findViewById(R.id.tv_option_two)
+        tvOptionsThree = findViewById(R.id.tv_option_three)
+        tvOptionsFour = findViewById(R.id.tv_option_four)
+        buttonSubmit = findViewById(R.id.btn_submit)
+        mQuestionsList = Constants.getQuestions()
+
         setQuestion()
 
         tvOptionsOne?.setOnClickListener(this)
@@ -47,6 +60,12 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
             mQuestionsList!![mCurrentPosition - 1]
 
         defaultOptionsView()
+
+        if(mCurrentPosition == mQuestionsList!!.size) {
+            buttonSubmit?.text = "FINISH"
+        } else {
+            buttonSubmit?.text = "SUBMIT"
+        }
 
         progressBar?.progress = mCurrentPosition!!
         tvProgress?.text = "$mCurrentPosition" + "/" + progressBar?.max
@@ -123,7 +142,34 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
                          
                             setQuestion()
                         }
+                        else -> {
+                            val intent =
+                                Intent(this@QuizQuestionActivity, ResultsActivity::class.java)
+                            intent.putExtra(Constants.USER_NAME, mUserName)
+                            intent.putExtra(Constants.CORRECT_ANSWERS, mQuestionsList?.size)
+                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList?.size)
+                            startActivity(intent)
+                            finish()
+                        }
                     }
+                } else {
+                    val question = mQuestionsList?.get(mCurrentPosition - 1)
+
+                    if (question!!.correctAnswer != mSelectedOptionPosition) {
+                        answerView(mSelectedOptionPosition, R.drawable.wrong_option_border)
+                    } else {
+                        mCorrectAnswers++
+                    }
+
+                    answerView(question.correctAnswer, R.drawable.correct_option_border)
+
+                    if (mCurrentPosition == mQuestionsList!!.size) {
+                        buttonSubmit?.text = "FINISH"
+                    } else {
+                        buttonSubmit?.text = "GO TO NEXT QUESTION"
+                    }
+
+                    mSelectedOptionPosition = 0
                 }
             }
         }
@@ -136,7 +182,7 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
         mSelectedOptionPosition = selectedOptionNum
 
         tv.setTextColor(
-            Color.parseColor("grayTypeFace")
+            Color.parseColor("#363A43")
         )
 
         tv.setTypeface(tv.typeface, Typeface.BOLD)
