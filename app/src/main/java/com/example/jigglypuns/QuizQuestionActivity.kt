@@ -2,7 +2,6 @@ package com.example.jigglypuns
 
 import android.graphics.Color
 import android.graphics.Typeface
-import android.graphics.drawable.AdaptiveIconDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
