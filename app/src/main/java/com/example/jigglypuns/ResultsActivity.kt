@@ -13,7 +13,7 @@ class ResultsActivity : AppCompatActivity() {
 
         val tvName: TextView = findViewById(R.id.tv_name)
         val tvScore: TextView = findViewById(R.id.tv_score)
-        val btnFinish: Button = findViewById(R.id.btn_submit)
+        val btnFinish: Button = findViewById(R.id.btn_finish)
 
         val userName = intent.getStringExtra(Constants.USER_NAME)
         tvName.text = userName

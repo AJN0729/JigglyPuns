@@ -146,7 +146,7 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
                             val intent =
                                 Intent(this@QuizQuestionActivity, ResultsActivity::class.java)
                             intent.putExtra(Constants.USER_NAME, mUserName)
-                            intent.putExtra(Constants.CORRECT_ANSWERS, mQuestionsList?.size)
+                            intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
                             intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList?.size)
                             startActivity(intent)
                             finish()
